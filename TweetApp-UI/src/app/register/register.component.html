@@ -1,0 +1,73 @@
+<div class="container" >
+  <div class="modal-dialog" > 
+    <div class="modal-content" style="background-color: rgb(200, 240, 250);box-shadow: 1px 5px 10px #888888;">          
+        <div class="modal-body">        
+          <div class="text-center">                    
+            <h4 class="mt-4 mb-1 pb-1">Register a New User</h4><br>
+          </div>
+            
+              <form [formGroup]="registerForm" #postForm="ngForm" (ngSubmit)="Register(postForm.value)" >
+                <!-- First Name -->
+                <div class="form-group" >                    
+                    <div class="form-outline mb-4">
+                      <input type="text" class="form-control" formControlName="first_name" id="first_name" name="first_name"  placeholder="Enter First Name" required />
+                      <span  style="color: red;" *ngIf="first_name && first_name.invalid && first_name.touched">Please enter First Name</span>
+                    </div>
+                </div>
+                <!-- Last Name -->
+                <div class="form-group">
+                    <div class="form-outline mb-4">
+                      <input type="text" class="form-control" formControlName="last_name" id="last_name" name="last_name"  placeholder="Enter Last Name"/>
+                    </div>
+                </div>
+
+              <!-- Contact Number -->
+              <div class="form-group">
+                  <div class="form-outline mb-4">
+                    <input type="text" class="form-control" formControlName="contactNumber" id="contactNumber" name="contactNumber"  placeholder="Enter Contact Number"/>
+                  </div>
+              </div>
+              
+                <!-- loginID -->
+                <div class="form-group" >
+                  <div class="form-outline mb-4">
+                    <input type="text" class="form-control" formControlName="loginID" id="loginID" name="loginID"  placeholder="loginID"/>
+                    <span style="color: red;" *ngIf="loginID && loginID.invalid && loginID.touched">Please enter a valid loginID id.</span>
+                  </div>
+                </div>
+
+                <!-- EmailId -->
+                 <div class="form-group" >
+                  <div class="form-outline mb-4">
+                    <input type="text" class="form-control" formControlName="email" id="email" name="email"  placeholder="email ID"/>
+                    <span  style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter email ID</span>
+                  </div>
+                </div> 
+
+                <!-- Password -->
+                <div class="form-group">
+                  <div class="form-outline mb-4">
+                    <input type="password" class="form-control" formControlName="password" id="password" name="password" placeholder="Password" required/>
+                    <span style="color: red;" *ngIf="password && password.invalid && password.touched">Please enter Password</span>
+                  </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                  <div class="form-outline mb-4">
+                    <input type="password" class="form-control" formControlName="confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required/>
+                    <span style="color: red;" *ngIf="confirmPassword && confirmPassword.invalid && confirmPassword.touched">Please enter Confirm Password</span>
+                  </div>
+                </div>
+                <!-- Register Button -->
+                <div class="form-group">
+                    <div class="form-outline mb-4">
+                      <button [disabled]="registerForm.invalid" class="btn btn-primary form-control">Register</button>
+                    </div>                    
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>  
+</div>

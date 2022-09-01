@@ -1,0 +1,20 @@
+<!-- <app-tweets></app-tweets> -->
+
+<div class="container">
+    <div class="row">
+        <form #postForm="ngForm" (ngSubmit)="onUpdateTweet(postForm.value)">
+            <div class="form-group">
+              <!-- <label for="title" > Name</label> -->
+              <input type="text" class="form-control" id="tweetid" name="tweetid" ngModel={{tweetId}} value={{tweetId}} hidden/>
+              <input type="text" class="form-control" id="postedBy" name="postedBy" ngModel={{userName}} value={{userName}} hidden/>
+              <!-- <label> Tweet</label> -->
+              <textarea class="form-control" id="tweet" name="tweet" ngModel={{tweet}} value={{tweet}}></textarea>
+              <button class="btn btn-primary">Submit</button>
+          </div>
+          </form>
+    </div>
+</div>
+
+        
+        
+ 

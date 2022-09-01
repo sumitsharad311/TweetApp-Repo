@@ -1,0 +1,41 @@
+<div class="container" >
+    <div class="modal-dialog" > 
+        <div class="modal-content" style="background-color: rgb(200, 240, 250);box-shadow: 1px 5px 10px #888888;">          
+            <div class="modal-body">
+                <div class="text-center">                    
+                    <h4 class="mt-1 mb-3 pb-1">TweetApp</h4>
+                  </div>
+              <form  [formGroup]="loginForm" #postForm="ngForm" (ngSubmit)="Login(postForm.value)" >
+                <div class="form-group">
+                    <div class="form-outline mb-4">
+                        <input type="text" formControlName="loginID" class="form-control" id="loginID" name="loginID"  placeholder="loginID"/>
+                        <span style="color: red;" *ngIf="loginID && loginID.invalid && loginID.touched">Please enter your loginID.</span>
+                    </div> 
+                </div>
+                <div class="form-group">                   
+                    <div class="form-outline mb-4">
+                        <input type="password"  formControlName="password" class="form-control" id="password" name="password" placeholder="Password"/>
+                        <span style="color: red;" *ngIf="password && password.invalid && password.touched">Please enter your password.</span>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <div class="form-outline mb-4">
+                        <button [disabled]="loginForm.invalid" class="btn btn-primary form-control">Login</button>
+                    </div>
+                    
+                </div>
+                <div class="text-center pt-1 mb-3 pb-1">                    
+                    <a class="text-muted" [routerLink]="['/forgotpassword']">Forgot password?</a>
+                  </div>
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Don't have an account?</p>
+                    <button type="button" class="btn btn-outline-danger" (click)="createUser()">Create new</button>
+                  </div>
+              </form>
+              
+            </div>         
+        </div>                 
+    </div>
+  
+</div>
