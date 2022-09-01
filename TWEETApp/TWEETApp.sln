@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWEETApp", "TWEETApp.csproj", "{2BC04BE3-32F7-4102-AF37-8A71F6B71F94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BC04BE3-32F7-4102-AF37-8A71F6B71F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC04BE3-32F7-4102-AF37-8A71F6B71F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC04BE3-32F7-4102-AF37-8A71F6B71F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC04BE3-32F7-4102-AF37-8A71F6B71F94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07987BBC-BC6D-4C57-8ABC-4FF1E4359895}
+	EndGlobalSection
+EndGlobal
